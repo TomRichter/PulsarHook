@@ -1,4 +1,7 @@
-# UnityHook
+# PulsarHook
+
+PulsarHook is a specialized fork of UnityHook for modifying the game 
+[PULSAR: Lost Colony](http://www.pulsarthegame.com/).
 
 UnityHook is a simple platform for hooking managed function calls, targeting
 specifically assemblies compiled for [Unity3d](http://unity3d.com/) games.
@@ -16,14 +19,6 @@ To hook game-assemblies you need to tell it the location of the game folder and 
 
 **HookRegistry** is the project that contains code to be executed when a hooked method/function has been called
 while the game is running. The project compiles to 1 binary file that must be passed to **Hooker**.
-Currently implemented hooks are following:
-
-- Hearthstone - *with dependancy on HS game libraries*
-    - Disable SSL connection between client/server;
-    - Duplicate packets transferred between client/server to other TCP streams. These streams try to attach to the
-    [HearthStone PacketAnalyzer](https://github.com/HearthSim/Hearthstone-Packet-Dumps/tree/master/HackstoneAnalyzer). 
-- General
-    - Hooking into the Unity logger.
 
 > **Hooker** will attempt to copy all referenced (by **HookRegistry**) library files to the library folder of the game. Make sure to validate all necessary library files are copied by inspecting the **Hooker** log output.
 

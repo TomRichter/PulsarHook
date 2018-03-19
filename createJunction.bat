@@ -13,7 +13,7 @@ REM ***************************************
 REM folder of the current repo
 SET REPO_PATH=%~dp0
 
-SET REPO_LIB_PATH="%REPO_PATH%hs_link"
+SET REPO_LIB_PATH="%REPO_PATH%pulsar_link"
 SET HS_INSTALL_PATH="%HS_INSTALL_PATH%"
 
 IF EXIST %REPO_LIB_PATH% GOTO lib_exists

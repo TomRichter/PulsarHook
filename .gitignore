@@ -56,4 +56,4 @@ ipch/
 *.vspx
 
 packages
-hs_link
+pulsar_link

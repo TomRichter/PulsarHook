@@ -55,5 +55,7 @@ ipch/
 *.vsp
 *.vspx
 
+.vs
+
 packages
 pulsar_link

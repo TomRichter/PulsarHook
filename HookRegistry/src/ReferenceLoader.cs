@@ -36,10 +36,10 @@ namespace Hooks
 			ReferenceTypes = new List<Type>()
 			{			
 				// Reference to PayloadFormat.dll
-				typeof(Handshake),
+				//typeof(Handshake),
 
 				// Reference to Google.Protobuf.dll
-				typeof(MessageDescriptor),
+				//typeof(MessageDescriptor),
 			};
 		}
 	}

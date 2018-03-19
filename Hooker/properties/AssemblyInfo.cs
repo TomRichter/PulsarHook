@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UnityHook")]
-[assembly: AssemblyDescription("Hook Unity methods from targetted libraries")]
+[assembly: AssemblyTitle("PulsarHook")]
+[assembly: AssemblyDescription("Hook PULSAR methods from targeted libraries")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Hooker.properties")]

@@ -1,4 +1,4 @@
-// File which holds information about the HearthStone game.
+// File which holds information about the PULSAR game.
 // Specifically; Install directory structure, location of lib files and
 // possibly more.
 
@@ -6,14 +6,14 @@ using System;
 
 namespace GameKnowledgeBase
 {
-	class HSKB : IKnowledge
+	class PulsarKB : IKnowledge
 	{
 
 		// This path element will be added to the `gamedir` option.
 		// In case the necessary libraries are not located in the root directory of the game folder.
-		// The Unity libraries are located at "Hearthstone_Data\Managed", from the root of HS install folder on Windows
+		// The Unity libraries are located at "PULSAR_LostColony_Data\Managed", from the root of HS install folder on Windows
 		// And in Contents/Resources/Data/Managed on macOS.
-		public const string WIN_REL_LIBRARY_PATH = "Hearthstone_Data\\Managed";
+		public const string WIN_REL_LIBRARY_PATH = "PULSAR_LostColony_Data\\Managed";
 		public const string MAC_REL_LIBRARY_PATH = "Contents/Resources/Data/Managed";
 
 		// Handle for selecting the correct AssemblyDefinition; see _assemblyFileNames
@@ -88,6 +88,6 @@ namespace GameKnowledgeBase
 			return (LIB_TYPE[])generalValues;
 		}
 
-		public HSKB() { }
+		public PulsarKB() { }
 	}
 }

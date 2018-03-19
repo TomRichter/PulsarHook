@@ -73,10 +73,10 @@ namespace Hooker
 				goto ERROR;
 			}
 
-			// Use knowledge about the game HearthStone. Game knowledge is defined in the shared code
-			// project KnowledgeBase. See `GameKnowledgeBase.HSKB` for more information.
+			// Use knowledge about the game PULSAR. Game knowledge is defined in the shared code
+			// project KnowledgeBase. See `GameKnowledgeBase.PulsarKB` for more information.
 			// Change the following line if you want to hook another game.
-			var gameKnowledge = new GameKB(generalOptions.GamePath, new HSKB());
+			var gameKnowledge = new GameKB(generalOptions.GamePath, new PulsarKB());
 
 			try
 			{

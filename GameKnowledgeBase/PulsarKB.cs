@@ -22,7 +22,7 @@ namespace GameKnowledgeBase
 		{
 			INVALID = 0,
 			LIB_CSHARP,
-			LIB_CSHARP_FIRSTPASS,
+			//LIB_CSHARP_FIRSTPASS,
 			//UNITY_ENGINE,
 			//LIB_PLAYMAKER,
 		}
@@ -33,8 +33,8 @@ namespace GameKnowledgeBase
 		{
 			"", // Empty/Default entry.
 			"Assembly-CSharp.dll",
-			"Assembly-CSharp-firstpass.dll",
-			"System.dll",
+			//"Assembly-CSharp-firstpass.dll",
+			//"System.dll",
 			//"UnityEngine.dll",
 			//"PlayMaker.dll",
 		};

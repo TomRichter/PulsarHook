@@ -1,10 +1,10 @@
 @echo off
-REM This script sets up a link to the binaries of Hearthstone.
-REM Change the HS_INSTALL_PATH value below before running this script.
+REM This script sets up a link to the binaries of PULSAR.
+REM Change the PULSAR_INSTALL_PATH value below before running this script.
 
-REM Change the following location to the hearthstone installation folder!
+REM Change the following location to the PULSAR installation folder!
 REM Don't forget to include the final slash
-SET HS_INSTALL_PATH=D:\Program Files (x86)\Hearthstone\
+SET PULSAR_INSTALL_PATH=C:\Program Files (x86)\Steam\steamapps\common\PULSARLostColony\
 
 REM ***************************************
 REM DO NOT change anything below this line!
@@ -14,10 +14,10 @@ REM folder of the current repo
 SET REPO_PATH=%~dp0
 
 SET REPO_LIB_PATH="%REPO_PATH%pulsar_link"
-SET HS_INSTALL_PATH="%HS_INSTALL_PATH%"
+SET PULSAR_INSTALL_PATH="%PULSAR_INSTALL_PATH%"
 
 IF EXIST %REPO_LIB_PATH% GOTO lib_exists
-IF NOT EXIST %HS_INSTALL_PATH% GOTO hs_wrong_path
+IF NOT EXIST %PULSAR_INSTALL_PATH% GOTO pulsar_wrong_path
 REM No problems, just proceed
 GOTO make_junction
 
@@ -29,10 +29,10 @@ REM Just remove the library folder and continue
 rmdir /s /q %REPO_LIB_PATH%
 
 :make_junction
-mklink /j %REPO_LIB_PATH% %HS_INSTALL_PATH%
+mklink /j %REPO_LIB_PATH% %PULSAR_INSTALL_PATH%
 goto :eof
 
-:hs_wrong_path
-echo The path leading to the Hearthstone binaries does not exist!
-echo -- %HS_INSTALL_PATH%
+:pulsar_wrong_path
+echo The path leading to the PULSAR binaries does not exist!
+echo -- %PULSAR_INSTALL_PATH%
 pause

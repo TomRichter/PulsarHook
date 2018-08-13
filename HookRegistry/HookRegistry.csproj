@@ -54,7 +54,9 @@
     <Reference Include="System.Data" />
     <Reference Include="UnityEngine">
       <HintPath>..\pulsar_link\PULSAR_LostColony_Data\Managed\UnityEngine.dll</HintPath>
-      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\pulsar_link\PULSAR_LostColony_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -62,9 +64,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\HookRegistry.cs" />
+    <Compile Include="src\hooks\DevhaxHook.cs" />
     <Compile Include="src\hooks\ExoticShopsHook.cs" />
     <Compile Include="src\hooks\Hook.cs" />
     <Compile Include="src\ReferenceLoader.cs" />
+    <Compile Include="src\wiki\exporters\IExporter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="active_hooks" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

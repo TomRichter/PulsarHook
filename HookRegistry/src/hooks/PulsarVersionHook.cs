@@ -3,9 +3,9 @@ using System;
 namespace Hooks
 {
 	[RuntimeHook]
-	class DevhaxHook : Hook
+	class PulsarVersionHook : Hook
 	{
-		public DevhaxHook()
+		public PulsarVersionHook()
 		{
 			HookRegistry.Register(OnCall);
 			isReentry = false;
@@ -16,17 +16,17 @@ namespace Hooks
 			return new string[] { "PLNetworkManager::Start" };
 		}
 
-		private void SetInternalBuild(ref object plNetworkManagerObject, bool isInternalBuild)
+		private void SetPulsarHookVersion(ref object plNetworkManagerObject, bool isPulsarHooked)
 		{
 			PLNetworkManager netMgr = (PLNetworkManager)plNetworkManagerObject;
 
-			if (isInternalBuild)
+			if (isPulsarHooked)
 			{
-				netMgr.VersionString += " i";
+				netMgr.VersionString += " (pulsar-hook)";
 			}
 			else
 			{
-				netMgr.VersionString = netMgr.VersionString.Replace(" i", String.Empty);
+				netMgr.VersionString = netMgr.VersionString.Replace(" (pulsar-hook)", String.Empty);
 			}
 		}
 
@@ -46,7 +46,7 @@ namespace Hooks
 			try
 			{
 				// Do stuff before the original method is called.
-				SetInternalBuild(ref thisObj, true);
+				SetPulsarHookVersion(ref thisObj, true);
 
 				// Call the original method.
 				return ReenterMethod<PLNetworkManager>(ref thisObj, "Start", args);

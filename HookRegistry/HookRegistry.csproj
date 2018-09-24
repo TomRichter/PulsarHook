@@ -64,6 +64,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\HookRegistry.cs" />
+    <Compile Include="src\hooks\PlayerCountHook.cs" />
+    <Compile Include="src\hooks\PulsarVersionHook.cs" />
     <Compile Include="src\hooks\DevhaxHook.cs" />
     <Compile Include="src\hooks\ExoticShopsHook.cs" />
     <Compile Include="src\hooks\Hook.cs" />

@@ -1,2 +1,1 @@
-PLNetworkManager::Start
-PhotonNetwork::CreateRoom
+PLGlobal::Awake

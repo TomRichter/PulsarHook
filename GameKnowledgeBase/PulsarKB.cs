@@ -36,6 +36,7 @@ namespace GameKnowledgeBase
 			//"Assembly-CSharp-firstpass.dll",
 			//"System.dll",
 			//"UnityEngine.dll",
+			//"UnityEngine.CoreModule.dll",
 			//"PlayMaker.dll",
 		};
 

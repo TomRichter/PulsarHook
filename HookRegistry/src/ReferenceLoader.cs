@@ -1,5 +1,3 @@
-using Google.Protobuf.Reflection;
-using HackstoneAnalyzer.PayloadFormat;
 using System;
 using System.Collections.Generic;
 

@@ -11,7 +11,8 @@
     <AssemblyName>HookRegistry</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +34,9 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony, Version=1.2.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lib.Harmony.1.2.0.1\lib\net35\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\pulsar_link\PULSAR_LostColony_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -41,20 +45,10 @@
       <HintPath>..\pulsar_link\PULSAR_LostColony_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.Protobuf">
-      <HintPath>..\lib\PayloadFormat\Debug\net35\Google.Protobuf.dll</HintPath>
-    </Reference>
-    <Reference Include="Mono.Security" />
-    <Reference Include="PayloadFormat">
-      <HintPath>..\lib\PayloadFormat\Debug\net35\PayloadFormat.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
-    <Reference Include="UnityEngine">
-      <HintPath>..\pulsar_link\PULSAR_LostColony_Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>..\pulsar_link\PULSAR_LostColony_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
@@ -64,16 +58,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\HookRegistry.cs" />
-    <Compile Include="src\hooks\PlayerCountHook.cs" />
-    <Compile Include="src\hooks\PulsarVersionHook.cs" />
-    <Compile Include="src\hooks\DevhaxHook.cs" />
-    <Compile Include="src\hooks\ExoticShopsHook.cs" />
+    <Compile Include="src\hooks\PluginHook.cs" />
+    <Compile Include="src\hooks\IPlugin.cs" />
     <Compile Include="src\hooks\Hook.cs" />
     <Compile Include="src\ReferenceLoader.cs" />
-    <Compile Include="src\wiki\exporters\IExporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="active_hooks" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
